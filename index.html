@@ -304,6 +304,21 @@
   
   
     <li class="md-nav__item">
+      <a href="https://spatiotemporal-wildlife-classification.github.io/Animal-Detector/" class="md-nav__link">
+        Animal Detector
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="https://spatiotemporal-wildlife-classification.github.io/Distributed-Scraping-Network/" class="md-nav__link">
         DSN Central
       </a>
@@ -459,7 +474,13 @@ methods.</p>
 <li>How does taxonomic level influence the performance of image classification?</li>
 <li>How does the novel cascading ensemble method improve upon baseline classifiers?</li>
 </ol>
-<h3 id="animal-detector">Animal Detector</h3>
+<h3 id="animal-detector"><a href="https://spatiotemporal-wildlife-classification.github.io/Animal-Detector/">Animal Detector</a></h3>
+<p>This repository performs the observation image pre-processing. 
+The pre-processing includes downloading the raw observation images from the iNaturalist urls. 
+Each image is subjected to the <a href="https://github.com/microsoft/CameraTraps/blob/main/megadetector.md">Mega-detector</a> YOLO5 object-detection model, capable of detecting animals within an image 
+and placing bounding-boxes. Each animal detection is cropped and forms a sub-image with image enhancement to maintain resolution.
+The resulting sub-images form a training and validation dataset constructed using a taxonomic directory structure to facilitate 
+image classification training in the <a href="https://spatiotemporal-wildlife-classification.github.io/Wildlife-Classification/">Wildlife Classification</a> repository.</p>
 <h3 id="binary-image-labelling">Binary Image Labelling</h3>
 <h3 id="distributed-scraping-network"><a href="https://spatiotemporal-wildlife-classification.github.io/Distributed-Scraping-Network/">Distributed Scraping Network</a></h3>
 <p>This API is created to run on a server, providing a central means of distributing and collecting weather data from
